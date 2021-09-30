@@ -44,6 +44,7 @@ class pubSpc extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children:<Widget> [
                             Container(
+                              padding: EdgeInsets.only(left: 10.00),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children:<Widget> [
@@ -110,6 +111,7 @@ class pubSpc extends StatelessWidget {
                               ),
                             ), // Your Coins Container
                             Container(
+                              padding: EdgeInsets.only(right: 10.00),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children:<Widget> [
