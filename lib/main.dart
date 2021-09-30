@@ -82,54 +82,57 @@ class pubSpc extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold (
-          backgroundColor: Colors.blueGrey,
-          appBar: AppBar(
-              title: Center(
-                  child: Text(
-                    'publicSpayce.com',
-                    style: TextStyle(
-                          fontSize: 25,
-                          fontFamily: 'Italianno',
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold
-                    ),
-                  )
-              ),
-              backgroundColor: Colors.blueGrey.shade900
-          ),
-          body: Center(
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children:<Widget> [
-                  Container(
-                    child: Image(
-                      image: AssetImage('images/pirate_w_heart.png')
-                    ),
-                  ),
-                  Container(
-                      width: 100,
-                      height: 70,
-                      color: Colors.blueGrey.shade900,
-                      child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children:<Widget> [
-                            aboutButton(),
-                            yourProfileButton(),
-                            Container(
-                              child: Image(
-                                  image: AssetImage('images/coin_w_jolly_roger.png')
-                              ),
-                            ),
-                            yourCoinsButton(),
-                            publicCoinsButton()
-                          ]
-                      )
-                  ),
-                ]
+      title: 'publicSpayce.com',
+      home: SafeArea(
+        child: Scaffold (
+            backgroundColor: Colors.blueGrey,
+            appBar: AppBar(
+                title: Center(
+                    child: Text(
+                      'publicSpayce.com',
+                      style: TextStyle(
+                            fontSize: 25,
+                            fontFamily: 'Italianno',
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
+                      ),
+                    )
+                ),
+                backgroundColor: Colors.blueGrey.shade900
             ),
+            body: Center(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children:<Widget> [
+                    Container(
+                      child: Image(
+                        image: AssetImage('images/pirate_w_heart.png')
+                      ),
+                    ),
+                    Container(
+                        width: 100,
+                        height: 70,
+                        color: Colors.blueGrey.shade900,
+                        child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children:<Widget> [
+                              aboutButton(),
+                              yourProfileButton(),
+                              Container(
+                                child: Image(
+                                    image: AssetImage('images/coin_w_jolly_roger.png')
+                                ),
+                              ),
+                              yourCoinsButton(),
+                              publicCoinsButton()
+                            ]
+                        )
+                    ),
+                  ]
+              ),
+          ),
         ),
       )
     );
