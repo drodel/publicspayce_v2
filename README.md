@@ -1,6 +1,10 @@
 # publicspayce_v2
 
-A new Flutter project.
+TODO: verify copyright of images
+    coin_w_jolly_roger.png
+    pirate_w_heart.png      <-- illegal
+
+
 
 ## Getting Started
 
