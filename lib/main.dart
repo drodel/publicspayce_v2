@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:fluttericon/linecons_icons.dart';
 
 void main() {
-    runApp( const PublicSpace() );
+    runApp( const PublicSpayce() );
 }
 
-class PublicSpace extends StatelessWidget {
-  const PublicSpace({Key? key}) : super(key: key);
+class PublicSpayce extends StatelessWidget {
+  const PublicSpayce({Key? key}) : super(key: key);
 
   TextStyle buttonTextStyle () {
     return const TextStyle(
