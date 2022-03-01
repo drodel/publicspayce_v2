@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:fluttericon/linecons_icons.dart';
 
 void main() {
-    runApp( pubSpc() );
+    runApp( const PublicSpace() );
 }
 
-class pubSpc extends StatelessWidget {
+class PublicSpace extends StatelessWidget {
+  const PublicSpace({Key? key}) : super(key: key);
 
   TextStyle buttonTextStyle () {
-    return TextStyle(
+    return const TextStyle(
         color: Colors.white,
         fontFamily: 'SourceSansPro',
         fontSize: 15
@@ -17,11 +18,11 @@ class pubSpc extends StatelessWidget {
 
   Container aboutButton () {
     return Container(
-      padding: EdgeInsets.only(left: 10.00),
+      padding: const EdgeInsets.only(left: 10.00),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children:<Widget> [
-          Icon(
+          const Icon(
               Icons.receipt_long_outlined,
               color: Colors.white
           ),
@@ -31,44 +32,40 @@ class pubSpc extends StatelessWidget {
     ); // About Container
   }
 
-  Container yourProfileButton () {
-    return Container(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Icon(
-              Icons.person_outlined,
-              color: Colors.white
-          ),
-          Text('Profile', style: buttonTextStyle()),
-        ],
-      ),
+  Column yourProfileButton () {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        const Icon(
+            Icons.person_outlined,
+            color: Colors.white
+        ),
+        Text('Profile', style: buttonTextStyle()),
+      ],
     ); // Profile Container
   }
 
-  Container yourCoinsButton () {
-    return Container(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children:<Widget> [
-          Icon(
-              Icons.favorite_border_outlined,
-              color: Colors.white
-          ),
-          Text('Your', style: buttonTextStyle()),
-          Text('Coins', style: buttonTextStyle()),
-        ],
-      ),
+  Column yourCoinsButton () {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children:<Widget> [
+        const Icon(
+            Icons.favorite_border_outlined,
+            color: Colors.white
+        ),
+        Text('Your', style: buttonTextStyle()),
+        Text('Coins', style: buttonTextStyle()),
+      ],
     ); // Your Coins Container
   }
 
   Container publicCoinsButton () {
     return Container(
-      padding: EdgeInsets.only(right: 10.00),
+      padding: const EdgeInsets.only(right: 10.00),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children:<Widget> [
-          Icon(
+          const Icon(
               Linecons.globe,
               color: Colors.white
           ),
@@ -87,7 +84,7 @@ class pubSpc extends StatelessWidget {
         child: Scaffold (
             backgroundColor: Colors.blueGrey,
             appBar: AppBar(
-                title: Center(
+                title: const Center(
                     child: Text(
                       'publicSpayce.com',
                       style: TextStyle(
@@ -105,10 +102,8 @@ class pubSpc extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children:<Widget> [
-                    Container(
-                      child: Image(
-                        image: AssetImage('images/pirate_w_heart.png')
-                      ),
+                    const Image(
+                      image: AssetImage('images/pirate_w_heart.png')
                     ),
                     Container(
                         width: 100,
@@ -120,10 +115,8 @@ class pubSpc extends StatelessWidget {
                             children:<Widget> [
                               aboutButton(),
                               yourProfileButton(),
-                              Container(
-                                child: Image(
-                                    image: AssetImage('images/coin_w_jolly_roger.png')
-                                ),
+                              const Image(
+                                  image: AssetImage('images/coin_w_jolly_roger.png')
                               ),
                               yourCoinsButton(),
                               publicCoinsButton()
