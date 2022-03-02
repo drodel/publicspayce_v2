@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:publicspayce_v2/screens/screen_template.dart';
 
 class AboutScreen extends StatelessWidget {
+
+  const AboutScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Center(child: Text('About Screen')),
-      ),
-      body: Center(
-        child: Text('About Screen'),
-        ),
-    );
+    return publicSpayceBase( context, 'About Screen' );
   }
 }

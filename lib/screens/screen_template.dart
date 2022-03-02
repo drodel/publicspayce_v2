@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:publicspayce_v2/components/appbar.dart';
 import 'package:publicspayce_v2/components/buttons.dart';
 
-SafeArea publicSpayceBase (String displayText) {
+SafeArea publicSpayceBase (BuildContext currentContext, String displayText) {
     return SafeArea(
                 child: Scaffold(
                           appBar: publicSpayceAppBar(),
@@ -23,13 +23,13 @@ SafeArea publicSpayceBase (String displayText) {
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         crossAxisAlignment: CrossAxisAlignment.stretch,
                                         children:<Widget> [
-                                          aboutButton(),
-                                          yourProfileButton(),
+                                          aboutButton( currentContext ),
+                                          yourProfileButton( currentContext ),
                                           const Image(
                                               image: AssetImage('images/coin_w_jolly_roger.png')
                                           ),
-                                          yourCoinsButton(),
-                                          publicCoinsButton()
+                                          yourCoinsButton( currentContext ),
+                                          publicCoinsButton( currentContext )
                                         ]
                                     )
                                 ),
