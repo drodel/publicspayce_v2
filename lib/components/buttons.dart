@@ -13,7 +13,7 @@ TextStyle buttonTextStyle () {
 GestureDetector aboutButton ( BuildContext passedContext ) {
   return GestureDetector(
     onTap: () {
-                 Navigator.pushNamed( passedContext, '/about' );
+                 Navigator.pushNamedAndRemoveUntil( passedContext, '/about', (_) => false ); // (_) => false prevents any back button
               },
     child: Container(
       padding: const EdgeInsets.only(left: kEdgePadding),
@@ -34,7 +34,7 @@ GestureDetector aboutButton ( BuildContext passedContext ) {
 GestureDetector yourProfileButton ( BuildContext passedContext ) {
   return GestureDetector(
     onTap: () {
-                 Navigator.pushNamed( passedContext, '/profile' );
+                 Navigator.pushNamedAndRemoveUntil( passedContext, '/profile', (_) => false ); // (_) => false prevents any back button
               },
     child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -52,7 +52,11 @@ GestureDetector yourProfileButton ( BuildContext passedContext ) {
 GestureDetector yourCoinsButton ( BuildContext passedContext ) {
   return GestureDetector(
     onTap: () {
-               Navigator.pushNamed( passedContext, '/mycoins' );
+               Navigator.pushNamedAndRemoveUntil(
+                       passedContext,
+                       '/mycoins',
+                       (_) => false,  // (_) => false prevents any back button
+               );
               },
     child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -71,7 +75,7 @@ GestureDetector yourCoinsButton ( BuildContext passedContext ) {
 GestureDetector publicCoinsButton ( BuildContext passedContext ) {
   return GestureDetector(
     onTap: () {
-                 Navigator.pushNamed( passedContext, '/publiccoins' );
+                 Navigator.pushNamedAndRemoveUntil( passedContext, '/publiccoins', (_) => false ); // (_) => false prevents any back button
               },
     child: Container(
         padding: const EdgeInsets.only(right: kEdgePadding),
