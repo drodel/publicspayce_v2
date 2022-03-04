@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:publicspayce_v2/components/appbar.dart';
 import 'package:publicspayce_v2/components/buttons.dart';
 
+/*
+    This is the base template for all publicSpayce screens. It maintains
+    the header (AppBar) and places the four navigation buttons in hte footer.
+ */
+
 SafeArea publicSpayceBase (BuildContext currentContext, String displayText) {
     return SafeArea(
                 child: Scaffold(

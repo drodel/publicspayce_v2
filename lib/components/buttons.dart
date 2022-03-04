@@ -14,18 +14,17 @@ TextStyle buttonTextStyle () {
   );
 }
 
-// TODO: make the onTaps a function passing the screen
+PageRouteBuilder zeroDurationPageRouteBuilder ( screen ) {
+    return PageRouteBuilder(
+        pageBuilder: (_, __, ___) => screen,
+        transitionDuration: Duration.zero
+    );
+}
 
 GestureDetector aboutButton ( BuildContext passedContext ) {
   return GestureDetector(
     onTap: () {
-//               Navigator.pushNamedAndRemoveUntil( passedContext, '/about', (_) => false ); // (_) => false prevents any back button
-                 Navigator.of(passedContext).pushReplacement(
-                     PageRouteBuilder(
-                         pageBuilder: (_, __, ___) => AboutScreen(),
-                         transitionDuration: Duration.zero
-                     )
-                 ); // (_) => false prevents any back button
+                 Navigator.of(passedContext).pushReplacement( zeroDurationPageRouteBuilder( AboutScreen() ) );
               },
     child: Container(
       padding: const EdgeInsets.only(left: kEdgePadding),
@@ -46,13 +45,7 @@ GestureDetector aboutButton ( BuildContext passedContext ) {
 GestureDetector yourProfileButton ( BuildContext passedContext ) {
   return GestureDetector(
     onTap: () {
-//                Navigator.pushNamedAndRemoveUntil( passedContext, '/profile', (_) => false ); // (_) => false prevents any back button
-                  Navigator.of(passedContext).pushReplacement(
-                      PageRouteBuilder(
-                          pageBuilder: (_, __, ___) => ProfileScreen(),
-                          transitionDuration: Duration.zero
-                      )
-                  );
+                  Navigator.of(passedContext).pushReplacement( zeroDurationPageRouteBuilder( ProfileScreen() ) );
               },
     child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -70,13 +63,7 @@ GestureDetector yourProfileButton ( BuildContext passedContext ) {
 GestureDetector yourCoinsButton ( BuildContext passedContext ) {
   return GestureDetector(
     onTap: () {
-//                Navigator.pushNamedAndRemoveUntil(passedContext, '/mycoins', (_) => false,  // (_) => false prevents any back button*/);
-                  Navigator.of(passedContext).pushReplacement(
-                      PageRouteBuilder(
-                          pageBuilder: (_, __, ___) => UserCoinScreen(),
-                          transitionDuration: Duration.zero
-                      )
-                  );
+                  Navigator.of(passedContext).pushReplacement( zeroDurationPageRouteBuilder( UserCoinScreen() ) );;
               },
     child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -95,13 +82,7 @@ GestureDetector yourCoinsButton ( BuildContext passedContext ) {
 GestureDetector publicCoinsButton ( BuildContext passedContext ) {
   return GestureDetector(
     onTap: () {
-//                 Navigator.pushNamedAndRemoveUntil( passedContext, '/publiccoins', (_) => false ); // (_) => false prevents any back button
-                   Navigator.of(passedContext).pushReplacement(
-                       PageRouteBuilder(
-                           pageBuilder: (_, __, ___) => PublicCoinsScreen(),
-                           transitionDuration: Duration.zero
-                       )
-                   );
+                   Navigator.of(passedContext).pushReplacement( zeroDurationPageRouteBuilder( PublicCoinsScreen() ) );
               },
     child: Container(
         padding: const EdgeInsets.only(right: kEdgePadding),
